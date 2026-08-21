@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Tia ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#07030b;
+    color:white;
+    overflow:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,40,120,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(170,50,255,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(255,0,100,.14),
+            transparent 35%
+        ),
+        #07030b;
+}
+
+/* =========================
+   BINTANG
+========================= */
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+        radial-gradient(1px 1px at 70% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 80% 70%, #fff, transparent),
+        radial-gradient(1px 1px at 40% 80%, #fff, transparent),
+        radial-gradient(2px 2px at 10% 90%, #fff, transparent),
+        radial-gradient(1px 1px at 90% 10%, #fff, transparent);
+
+    background-size:350px 350px;
+
+    animation:
+        gerakBintang 30s linear infinite;
+
+    opacity:.55;
+}
+
+@keyframes gerakBintang{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-350px);
+    }
+}
+
+/* =========================
+   SCREEN SYSTEM
+========================= */
+
+.screen{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:25px;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transform:scale(1.08);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        visibility .8s;
+}
+
+.screen.active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:scale(1);
+}
+
+/* =========================
+   SCREEN CONTENT
+========================= */
+
+.content{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+}
+
+/* =========================
+   LAYAR 1
+========================= */
+
+.label{
+    color:#ff72ae;
+    letter-spacing:6px;
+    font-size:12px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.nama{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+        clamp(85px,18vw,170px);
+
+    line-height:.75;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffb1d2,
+            #fff,
+            #ff65a8
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+
+    animation:
+        kilau 5s linear infinite;
+}
+
+@keyframes kilau{
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+}
+
+.subtitle{
+    margin-top:35px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+        clamp(30px,6vw,58px);
+
+    font-weight:500;
+}
+
+.subtitle span{
+    color:#ff4f9a;
+
+    text-shadow:
+        0 0 20px #ff217d,
+        0 0 40px rgba(255,30,120,.4);
+}
+
+.description{
+    max-width:600px;
+
+    margin:25px auto;
+
+    color:#aaa0aa;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:25px;
+
+    padding:16px 32px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:14px;
+
+    text-decoration:none;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    background:
+        rgba(255,255,255,.07);
+
+    backdrop-filter:blur(15px);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,40,120,.12);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+
+    background:
+        rgba(255,50,130,.16);
+
+    box-shadow:
+        0 0 40px
+        rgba(255,40,120,.35);
+}
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart{
+    font-size:100px;
+
+    margin-bottom:30px;
+
+    animation:
+        detak 1.5s infinite;
+
+    filter:
+        drop-shadow(0 0 12px #ff217d)
+        drop-shadow(0 0 35px #ff217d);
+}
+
+@keyframes detak{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.18);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.2);
+    }
+
+    60%{
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.card{
+    width:100%;
+    max-width:800px;
+
+    padding:
+        45px
+        35px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.5),
+
+        0 0 60px
+        rgba(255,30,120,.08);
+}
+
+.card h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+        clamp(40px,7vw,65px);
+
+    margin-bottom:25px;
+}
+
+.card p{
+    color:#c8bec8;
+
+    font-size:14px;
+
+    line-height:2;
+
+    margin-bottom:18px;
+}
+
+.pink{
+    color:#ff72ae;
+    font-weight:600;
+}
+
+/* =========================
+   SURAT
+========================= */
+
+.letter{
+    width:100%;
+    max-width:780px;
+
+    max-height:85vh;
+
+    overflow:auto;
+
+    padding:40px 35px;
+
+    text-align:left;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.5);
+}
+
+.letter::-webkit-scrollbar{
+    width:4px;
+}
+
+.letter::-webkit-scrollbar-thumb{
+    background:#ff4f9a;
+    border-radius:20px;
+}
+
+.letter-top{
+    display:flex;
+    justify-content:space-between;
+
+    color:#77707a;
+
+    font-size:11px;
+
+    margin-bottom:35px;
+}
+
+.letter h2{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:45px;
+
+    margin-bottom:25px;
+}
+
+.letter p{
+    color:#c7bec7;
+
+    font-size:14px;
+
+    line-height:2;
+
+    margin-bottom:20px;
+}
+
+.signature{
+    margin-top:35px;
+
+    color:#ff72ae;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-title{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:
+        clamp(50px,10vw,100px);
+
+    line-height:.9;
+}
+
+.final-title span{
+    display:block;
+
+    color:#ff579f;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,50,130,.7);
+}
+
+.final-text{
+    margin-top:25px;
+
+    color:#918891;
+
+    font-size:14px;
+}
+
+/* =========================
+   FLOATING HEART
+========================= */
+
+.heart{
+    position:fixed;
+
+    bottom:-40px;
+
+    color:#ff4f9a;
+
+    pointer-events:none;
+
+    z-index:20;
+
+    filter:
+        drop-shadow(0 0 10px #ff267d);
+
+    animation:
+        naik linear forwards;
+}
+
+@keyframes naik{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.5)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-110vh)
+            scale(1.4)
+            rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .screen{
+        padding:18px;
+    }
+
+    .card{
+        padding:35px 22px;
+    }
+
+    .letter{
+        padding:30px 22px;
+    }
+
+    .big-heart{
+        font-size:75px;
+    }
+
+    .description{
+        font-size:13px;
+    }
+
+    .btn{
+        padding:14px 25px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="stars"></div>
+
+
+<!-- =================================
+     LAYAR 1
+================================= -->
+
+<section class="screen active" id="screen1">
+
+    <div class="content">
+
+        <div class="label">
+            Sebuah pesan kecil untuk
+        </div>
+
+        <div class="nama">
+            Tia Bucu Cu
+        </div>
+
+        <div class="subtitle">
+            Kamu adalah bagian
+            <span>terindah.</span>
+        </div>
+
+        <p class="description">
+            Ada sesuatu yang ingin aku sampaikan.
+            Bukan sesuatu yang rumit,
+            hanya beberapa kata yang mungkin
+            bisa membuat senyummu hari ini.
+        </p>
+
+        <button class="btn" onclick="nextScreen(2)">
+            💌 &nbsp; Buka Pesan
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     LAYAR 2
+================================= -->
+
+<section class="screen" id="screen2">
+
+    <div class="content">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <div class="card">
+
+            <h2>
+                Hai, Tia...
+            </h2>
+
+            <p>
+                Kalau kamu sampai berada di halaman ini,
+                berarti kamu sudah membuka sedikit
+                bagian dari apa yang ingin aku sampaikan.
+            </p>
+
+            <p>
+                Mungkin kata-kata di website ini tidak akan
+                pernah cukup untuk menjelaskan semuanya.
+                Tapi setidaknya aku ingin kamu tahu satu hal:
+            </p>
+
+            <p>
+                <span class="pink">
+                    Kamu adalah seseorang yang sangat berarti.
+                </span>
+            </p>
+
+            <button class="btn" onclick="nextScreen(3)">
+                ✨ &nbsp; Lanjutkan
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     LAYAR 3
+================================= -->
+
+<section class="screen" id="screen3">
+
+    <div class="content">
+
+        <div class="label">
+            Untuk Tia
+        </div>
+
+        <div class="letter">
+
+            <div class="letter-top">
+
+                <span>
+                    UNTUK SESEORANG YANG SPESIAL
+                </span>
+
+                <span>
+                    ❤️ 2026
+                </span>
+
+            </div>
+
+            <h2>
+                Dear Tia,
+            </h2>
+
+            <p>
+                Ada banyak hal di dunia ini yang sulit
+                dijelaskan dengan kata-kata.
+                Salah satunya adalah bagaimana seseorang
+                bisa menjadi begitu berarti hanya dengan
+                menjadi dirinya sendiri.
+            </p>
+
+            <p>
+                Aku cuma ingin bilang,
+                terima kasih sudah menjadi Tia.
+                Terima kasih untuk senyum,
+                tawa, cerita, dan semua hal kecil
+                yang mungkin menurutmu biasa saja,
+                tetapi sebenarnya bisa berarti banyak.
+            </p>
+
+            <p>
+                Semoga kamu selalu menemukan alasan
+                untuk tersenyum.
+                Semoga semua impian yang kamu punya
+                perlahan bisa menjadi kenyataan.
+            </p>
+
+            <p>
+                Dan ketika suatu hari semuanya terasa
+                berat, jangan lupa bahwa kamu tetap
+                seseorang yang berharga.
+            </p>
+
+            <p>
+                Tidak perlu menjadi sempurna.
+                Tidak perlu menjadi seperti orang lain.
+                Tetaplah menjadi dirimu sendiri,
+                karena <span class="pink">Tia yang apa adanya
+                sudah cukup spesial.</span>
+            </p>
+
+            <div class="signature">
+                Dengan penuh kasih ❤️
+            </div>
+
+            <button class="btn" onclick="nextScreen(4)">
+                🌙 &nbsp; Satu Hal Lagi
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     LAYAR 4
+================================= -->
+
+<section class="screen" id="screen4">
+
+    <div class="content">
+
+        <div class="label">
+            Sebelum halaman ini berakhir
+        </div>
+
+        <div class="final-title">
+
+            Tetaplah
+            <span>bersinar, Tia Bucu Cu.</span>
+
+        </div>
+
+        <p class="final-text">
+            Karena dunia terasa sedikit lebih indah
+            dengan adanya kamu di dalamnya dari rasya cowo mu.
+        </p>
+
+        <div class="big-heart" style="margin-top:35px;">
+            ❤️
+        </div>
+
+        <button class="btn" onclick="nextScreen(1)">
+            ↻ &nbsp; Mulai Lagi
+        </button>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =================================
+   PINDAH LAYAR
+================================= */
+
+function nextScreen(number){
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(screen => {
+
+            screen.classList.remove("active");
+
+        });
+
+
+    setTimeout(() => {
+
+        document
+            .getElementById("screen" + number)
+            .classList.add("active");
+
+    },100);
+
+}
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const daftarHati = [
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "💞",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        daftarHati[
+            Math.floor(
+                Math.random() *
+                daftarHati.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random()*20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random()*7) + "s";
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    },12000);
+
+}
+
+
+setInterval(createHeart,800);
+
+
+/* =================================
+   EFEK KLIK
+================================= */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        for(let i=0;i<6;i++){
+
+            const heart =
+                document.createElement("div");
+
+            heart.innerHTML = "♥";
+
+            heart.style.position =
+                "fixed";
+
+            heart.style.left =
+                event.clientX + "px";
+
+            heart.style.top =
+                event.clientY + "px";
+
+            heart.style.color =
+                "#ff4f9a";
+
+            heart.style.fontSize =
+                "18px";
+
+            heart.style.pointerEvents =
+                "none";
+
+            heart.style.zIndex =
+                "999";
+
+            const x =
+                (Math.random()-0.5)*180;
+
+            const y =
+                (Math.random()-0.5)*180;
+
+
+            heart.animate(
+
+                [
+                    {
+                        transform:
+                            "translate(0,0) scale(1)",
+
+                        opacity:1
+                    },
+
+                    {
+                        transform:
+                            `translate(${x}px,${y}px) scale(0)`,
+
+                        opacity:0
+                    }
+                ],
+
+                {
+                    duration:800,
+                    easing:"ease-out"
+                }
+
+            );
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            },800);
+
+        }
+
+    }
+
+);
+
+</script>
+
+</body>
+</html>
